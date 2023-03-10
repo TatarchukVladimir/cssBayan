@@ -4,24 +4,50 @@
     padding: 0;
 }
 
-html {
-    font-size: 10px;
-}
-
 body {
     margin: 0 auto;
+    background-color: red;
 }
 
 h1 {
-    font-size: 2rem;
+    font-size: 1.8rem;
+    color: #ffffff;
+    font-weight: bold;
+    text-shadow: 
+		-0   -0.06rem 0   #000000,
+		 0   -0.06rem 0   #000000,
+		-0    0.06rem 0   #000000,
+		 0    0.06rem 0   #000000,
+		-0.06rem -0   0   #000000,
+		 0.06rem -0   0   #000000,
+		-0.06rem  0   0   #000000,
+		 0.06rem  0   0   #000000,
+		-0.06rem -0.06rem 0   #000000,
+		 0.06rem -0.06rem 0   #000000,
+		-0.06rem  0.06rem 0   #000000,
+		 0.06rem  0.06rem 0   #000000,
+		-0.06rem -0.06rem 0   #000000,
+		 0.06rem -0.06rem 0   #000000,
+		-0.06rem  0.06rem 0   #000000,
+		 0.06rem  0.06rem 0   #000000;
 }
 
 .wrapper {
-    padding: 10vh 10vw;
+    padding: 4vw 4vw;
+}
+
+.memes {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .accordeon {
-    border: 1px solid black;
+    border-radius: 1rem;
+    overflow: hidden;
+    width: 80vw;
+    border: 0.125rem solid #ffffff;
+    margin-top: 1vh;
 }
 
 .accordeon__item {
@@ -34,34 +60,55 @@ h1 {
     display: none;
 }
 
-.accordeon__input:checked ~ .item__content{
-    height: auto;
-}
-
 .item__label {
-    border: 1px solid black;
     display: flex;
+    align-items: center;
     justify-content: space-between;
-    cursor: pointer;
-}
-
-.item__icon {
-    
+    padding: 2vw;
+    font-size: 1.2rem;
+    background-color: red;
+    font-weight: bold;
+	color: #FFFFFF;
+	text-shadow: 
+		-0   -0.06rem 0   #000000,
+		 0   -0.06rem 0   #000000,
+		-0    0.06rem 0   #000000,
+		 0    0.06rem 0   #000000,
+		-0.06rem -0   0   #000000,
+		 0.06rem -0   0   #000000,
+		-0.06rem  0   0   #000000,
+		 0.06rem  0   0   #000000,
+		-0.06rem -0.06rem 0   #000000,
+		 0.06rem -0.06rem 0   #000000,
+		-0.06rem  0.06rem 0   #000000,
+		 0.06rem  0.06rem 0   #000000,
+		-0.06rem -0.06rem 0   #000000,
+		 0.06rem -0.06rem 0   #000000,
+		-0.06rem  0.06rem 0   #000000,
+		 0.06rem  0.06rem 0   #000000;
 }
 
 .item__content {
-    height: 0px;
+    height: 0;
     overflow: hidden;
-    border: 1px solid black;
     border-top: none;
+    transition: all .3s linear;
 }
 
-/* .item__icon {
-    background-image: url();
-} */
+.accordeon__input:checked ~ .item__content{
+    height: 80vw;
+}
 
-@media screen and (max-width: 320px) {
-    .wrapper {
-        
-    }
+.item__img {
+    display: block;
+    width: 100%;
+}
+
+.item__icon {
+    display: block;
+    width: 1.2rem;
+}
+
+.accordeon__input:checked ~ .item__label  .item__icon{
+    transform: rotate(45deg);
 }
