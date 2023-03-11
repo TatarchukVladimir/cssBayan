@@ -121,10 +121,10 @@ h1 {
     }
 }
 
-@media (min-width: 820px) {
+@media (min-width: 768px) {
     .wrapper {
         width: 100vw;
-        padding: 4vw 0;
+        padding: 3vw 0;
     }
 
     h1 {
@@ -162,7 +162,7 @@ h1 {
     }
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 1280px) {
     .wrapper {
         width: 40vw;
         padding: 1vw 0;
