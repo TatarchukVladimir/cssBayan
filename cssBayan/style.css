@@ -51,7 +51,6 @@ h1 {
 }
 
 .accordeon__input {
-    opacity: 0;
     display: none;
 }
 
@@ -111,7 +110,7 @@ h1 {
     color: #ffffff;
 }
 
-.accordeon__input:checked ~ .item__label  .item__icon{
+.accordeon__input:checked ~ .item__label .item__icon{
     transform: rotate(45deg);
 }
 
@@ -170,19 +169,12 @@ h1 {
         margin: 0 auto;
     }
 
-    h1 {
-        font-size: 3rem;
-    }
-
     .item__label {
         padding: 0.5vw;
         transition: all .3s linear;
     }
 
-    .item__label:hover {
-        cursor: pointer;
-    }
-
+    .item__label:hover,
     .item__content:hover {
         cursor: pointer;
     }
@@ -199,14 +191,13 @@ h1 {
         color: #ffffff;
     }
 
-    .accordeon__input:checked ~ .item__content{
+    .accordeon__input:checked ~ .item__content,
+    .item__label:hover ~ .item__content,
+    .item__content:hover {
         height: 32vw;
     }
 
-    .accordeon__input:active ~ .item__content {
-        filter: brightness(70%);
-    }
-
+    .accordeon__input:active ~ .item__content , 
     .accordeon__input:active ~ .item__label {
         filter: brightness(70%);
     }
@@ -214,20 +205,8 @@ h1 {
     .accordeon__input:active ~ .item__label .item__name {
         color: #00ffff;
     }
-    
-    .item__label:hover ~ .item__content {
-        height: 32vw;
-    }
 
-    .item__label:hover .item__icon {
-        transform: rotate(45deg);
-    }
-
-    /* .item__content:hover  .item__icon {
-        transform: rotate(45deg);
-    } */
-
-    .item__content:hover{
-        height: 32vw;
+    .accordeon__item:hover > .item__label > .item__icon {
+        transform: rotate(45deg); 
     }
 }
