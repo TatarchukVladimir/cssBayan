@@ -116,14 +116,14 @@ h1 {
 
 @media (min-width: 320px) {
     .wrapper {
-        width: 100vw;
+        width: 100%;
         padding: 12vw 0;
     }
 }
 
 @media (min-width: 768px) {
     .wrapper {
-        width: 100vw;
+        width: 100%;
         padding: 3vw 0;
     }
 
@@ -164,7 +164,7 @@ h1 {
 
 @media (min-width: 1280px) {
     .wrapper {
-        width: 40vw;
+        width: 40%;
         padding: 1vw 0;
         margin: 0 auto;
     }
