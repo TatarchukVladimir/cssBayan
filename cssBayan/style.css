@@ -8,6 +8,11 @@ body {
     background-color: red;
 }
 
+.wrapper {
+    width: 100%;
+    padding: 12vw 0;
+}
+
 h1 {
     font-size: 1.8rem;
     color: #00ffff;
@@ -148,18 +153,13 @@ h1 {
 }
 
 @media (min-width: 320px) and (hover:hover) {
-    .wrapper {
-        width: 100%;
-        padding: 12vw 0;
-    }
-
     .item__label:hover ~ .item__content,
     .item__content:hover {
         height: 80vw;
     }
 }
 
-@media (min-width: 768px) and (hover:hover) {
+@media (min-width: 768px) {
     .wrapper {
         width: 100%;
         padding: 3vw 0;
