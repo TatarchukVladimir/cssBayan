@@ -60,6 +60,7 @@ h1 {
     justify-content: space-between;
     padding: 2vw;
     background-color: rgb(255, 0, 0);
+    transition: all .3s linear;
 }
 
 .item__name {
@@ -213,7 +214,6 @@ h1 {
 
     .item__label {
         padding: 0.5vw;
-        transition: all .3s linear;
     }
 
     .item__name {
