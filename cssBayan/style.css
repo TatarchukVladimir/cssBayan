@@ -114,14 +114,51 @@ h1 {
     transform: rotate(45deg);
 }
 
-@media (min-width: 320px) {
+@media (hover:hover) {
+    .accordeon__item:hover > .item__label > .item__icon {
+        transform: rotate(45deg); 
+    }
+
+    .accordeon:hover .item__name {
+        color: #ffffff;
+    }
+
+    .item__label:hover,
+    .item__content:hover {
+        cursor: pointer;
+    }
+
+    .item__icon {
+        visibility: hidden;
+    }
+
+    .accordeon:hover .item__icon {
+        visibility: visible;
+    }
+
+    .accordeon__input:active ~ .item__content , 
+    .accordeon__input:active ~ .item__label {
+        filter: brightness(70%);
+    }
+
+    .accordeon__input:active ~ .item__label .item__name {
+        color: #00ffff;
+    }
+}
+
+@media (min-width: 320px) and (hover:hover) {
     .wrapper {
         width: 100%;
         padding: 12vw 0;
     }
+
+    .item__label:hover ~ .item__content,
+    .item__content:hover {
+        height: 80vw;
+    }
 }
 
-@media (min-width: 768px) {
+@media (min-width: 768px) and (hover:hover) {
     .wrapper {
         width: 100%;
         padding: 3vw 0;
@@ -160,9 +197,10 @@ h1 {
         display: block;
         width: 2rem;
     }
+
 }
 
-@media (min-width: 1280px) {
+@media (min-width: 1280px) and (hover:hover) {
     .wrapper {
         width: 40%;
         padding: 1vw 0;
@@ -182,39 +220,10 @@ h1 {
         font-size: 2.2rem;
     }
 
-    .item__label:hover,
-    .item__content:hover {
-        cursor: pointer;
-    }
-
-    .item__icon {
-        visibility: hidden;
-    }
-
-    .accordeon:hover .item__icon {
-        visibility: visible;
-    }
-
-    .accordeon:hover .item__name {
-        color: #ffffff;
-    }
-
     .accordeon__input:checked ~ .item__content,
     .item__label:hover ~ .item__content,
     .item__content:hover {
         height: 32vw;
-    }
-
-    .accordeon__input:active ~ .item__content , 
-    .accordeon__input:active ~ .item__label {
-        filter: brightness(70%);
-    }
-
-    .accordeon__input:active ~ .item__label .item__name {
-        color: #00ffff;
-    }
-
-    .accordeon__item:hover > .item__label > .item__icon {
-        transform: rotate(45deg); 
-    }
+    }   
 }
+
