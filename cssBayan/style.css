@@ -1,0 +1,229 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: red;
+}
+
+.wrapper {
+    width: 100%;
+    padding: 12vw 0;
+}
+
+h1 {
+    font-size: 1.8rem;
+    color: #00ffff;
+    font-weight: bold;
+    text-shadow: 
+		-0   -0.06rem 0   #000000,
+		 0   -0.06rem 0   #000000,
+		-0    0.06rem 0   #000000,
+		 0    0.06rem 0   #000000,
+		-0.06rem -0   0   #000000,
+		 0.06rem -0   0   #000000,
+		-0.06rem  0   0   #000000,
+		 0.06rem  0   0   #000000,
+		-0.06rem -0.06rem 0   #000000,
+		 0.06rem -0.06rem 0   #000000,
+		-0.06rem  0.06rem 0   #000000,
+		 0.06rem  0.06rem 0   #000000,
+		-0.06rem -0.06rem 0   #000000,
+		 0.06rem -0.06rem 0   #000000,
+		-0.06rem  0.06rem 0   #000000,
+		 0.06rem  0.06rem 0   #000000;
+}
+
+.memes {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.accordeon {
+    border-radius: 1rem;
+    overflow: hidden;
+    width: 80%;
+    border: 0.125rem solid #ffffff;
+    margin-top: 1vh;
+}
+
+.accordeon__item {
+    display: flex;
+    flex-direction: column;
+}
+
+.accordeon__input {
+    display: none;
+}
+
+.item__label {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2vw;
+    background-color: rgb(255, 0, 0);
+    transition: all .3s linear;
+}
+
+.item__name {
+    font-size: 1.2rem;
+    font-weight: bold;
+	color: #00ffff;
+	text-shadow: 
+		-0   -0.06rem 0   #000000,
+		 0   -0.06rem 0   #000000,
+		-0    0.06rem 0   #000000,
+		 0    0.06rem 0   #000000,
+		-0.06rem -0   0   #000000,
+		 0.06rem -0   0   #000000,
+		-0.06rem  0   0   #000000,
+		 0.06rem  0   0   #000000,
+		-0.06rem -0.06rem 0   #000000,
+		 0.06rem -0.06rem 0   #000000,
+		-0.06rem  0.06rem 0   #000000,
+		 0.06rem  0.06rem 0   #000000,
+		-0.06rem -0.06rem 0   #000000,
+		 0.06rem -0.06rem 0   #000000,
+		-0.06rem  0.06rem 0   #000000,
+		 0.06rem  0.06rem 0   #000000;
+}
+
+.item__content {
+    height: 0;
+    overflow: hidden;
+    border-top: none;
+    transition: all .3s linear;
+}
+
+.accordeon__input:checked ~ .item__content{
+    height: 80vw;
+}
+
+.item__img {
+    display: block;
+    width: 100%;
+}
+
+.item__icon {
+    display: block;
+    width: 1.2rem;
+}
+
+.accordeon__input:checked ~ .item__label .item__name {
+    color: #ffffff;
+}
+
+.accordeon__input:checked ~ .item__label .item__icon{
+    transform: rotate(45deg);
+}
+
+@media (hover:hover) {
+    .accordeon__item:hover > .item__label > .item__icon {
+        transform: rotate(45deg); 
+    }
+
+    .accordeon:hover .item__name {
+        color: #ffffff;
+    }
+
+    .item__label:hover,
+    .item__content:hover {
+        cursor: pointer;
+    }
+
+    .item__icon {
+        visibility: hidden;
+    }
+
+    .accordeon:hover .item__icon {
+        visibility: visible;
+    }
+
+    .accordeon__input:active ~ .item__content , 
+    .accordeon__input:active ~ .item__label {
+        filter: brightness(70%);
+    }
+
+    .accordeon__input:active ~ .item__label .item__name {
+        color: #00ffff;
+    }
+}
+
+@media (min-width: 320px) and (hover:hover) {
+    .item__label:hover ~ .item__content,
+    .item__content:hover {
+        height: 80vw;
+    }
+}
+
+@media (min-width: 768px) {
+    .wrapper {
+        width: 100%;
+        padding: 3vw 0;
+    }
+
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    .item__label {
+        padding: 2vw;
+    }
+
+    .item__name {
+        font-size: 2rem;
+        text-shadow: 
+            -0   -0.1rem 0   #000000,
+             0   -0.1rem 0   #000000,
+            -0    0.1rem 0   #000000,
+             0    0.1rem 0   #000000,
+            -0.1rem -0   0   #000000,
+             0.1rem -0   0   #000000,
+            -0.1rem  0   0   #000000,
+             0.1rem  0   0   #000000,
+            -0.1rem -0.1rem 0   #000000,
+             0.1rem -0.1rem 0   #000000,
+            -0.1rem  0.1rem 0   #000000,
+             0.1rem  0.1rem 0   #000000,
+            -0.1rem -0.1rem 0   #000000,
+             0.1rem -0.1rem 0   #000000,
+            -0.1rem  0.1rem 0   #000000,
+             0.1rem  0.1rem 0   #000000;
+    }
+    
+    .item__icon {
+        display: block;
+        width: 2rem;
+    }
+
+}
+
+@media (min-width: 1280px) and (hover:hover) {
+    .wrapper {
+        width: 40%;
+        padding: 1vw 0;
+        margin: 0 auto;
+    }
+
+    h1 {
+        font-size: 3rem;
+    }
+
+    .item__label {
+        padding: 0.5vw;
+    }
+
+    .item__name {
+        font-size: 2.2rem;
+    }
+
+    .accordeon__input:checked ~ .item__content,
+    .item__label:hover ~ .item__content,
+    .item__content:hover {
+        height: 32vw;
+    }   
+}
+
